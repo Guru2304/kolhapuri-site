@@ -1,89 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Kolhapuri Market</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAV -->
-<header class="nav">
-  <h2>Kolhapuri Store</h2>
-
-  <input type="text" id="search" placeholder="Search chappals..." onkeyup="searchProducts()">
-
-  <button onclick="showLogin()">Login</button>
-  <button onclick="showCart()">Cart</button>
-</header>
-
-<!-- FILTERS -->
-<div class="filters">
-  <button onclick="filter('all')">All</button>
-  <button onclick="filter('men')">Men</button>
-  <button onclick="filter('women')">Women</button>
-  <button onclick="filter('wedding')">Wedding</button>
+<div class="card men">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Leather_sandals_india.jpg">
+  <h3>Classic Kolhapuri</h3>
+  <p>₹1200</p>
+  <button onclick="addToCart('Classic Kolhapuri',1200)">Add</button>
 </div>
 
-<!-- PRODUCTS -->
-<div id="productList" class="grid">
-
-  <div class="card men" onclick="openProduct('Classic',1200)">
-    <img src="https://picsum.photos/200?1">
-    <h3>Classic Brown</h3>
-    <p>₹1200</p>
-  </div>
-
-  <div class="card women" onclick="openProduct('Gold Style',1800)">
-    <img src="https://picsum.photos/200?2">
-    <h3>Gold Style</h3>
-    <p>₹1800</p>
-  </div>
-
-  <div class="card wedding" onclick="openProduct('Royal Wedding',2500)">
-    <img src="https://picsum.photos/200?3">
-    <h3>Wedding Royal</h3>
-    <p>₹2500</p>
-  </div>
-
+<div class="card men">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Traditional_Indian_sandals.jpg">
+  <h3>Leather Handmade</h3>
+  <p>₹1500</p>
+  <button onclick="addToCart('Leather Handmade',1500)">Add</button>
 </div>
 
-<!-- CART -->
-<div id="cartBox" class="cart hidden">
-  <h3>Your Cart</h3>
-  <ul id="cart"></ul>
-  <h4>Total: ₹<span id="total">0</span></h4>
-  <button onclick="checkout()">Checkout</button>
+<div class="card wedding">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Indian_traditional_footwear.jpg">
+  <h3>Wedding Designer</h3>
+  <p>₹2500</p>
+  <button onclick="addToCart('Wedding Designer',2500)">Add</button>
 </div>
-
-<!-- LOGIN MODAL -->
-<div id="loginBox" class="modal hidden">
-  <div class="modal-content">
-    <h3>Login</h3>
-    <input placeholder="Username">
-    <input placeholder="Password" type="password">
-    <button onclick="closeLogin()">Login</button>
-  </div>
-</div>
-
-<!-- PRODUCT MODAL -->
-<div id="productBox" class="modal hidden">
-  <div class="modal-content">
-    <h2 id="pname"></h2>
-    <p id="pprice"></p>
-    <button onclick="addToCartFromModal()">Add to Cart</button>
-    <button onclick="closeProduct()">Close</button>
-  </div>
-</div>
-
-<!-- CHECKOUT -->
-<div id="checkoutBox" class="modal hidden">
-  <div class="modal-content">
-    <h2>Checkout</h2>
-    <p>Order placed successfully 🎉</p>
-    <button onclick="closeCheckout()">Close</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
