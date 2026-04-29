@@ -1,69 +1,304 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kolhapuri Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paayal Kolhapuri | Handcrafted Kolhapuri Chappals</title>
+  <meta
+    name="description"
+    content="Explore handcrafted Kolhapuri chappals across wedding, heritage, daily comfort, luxe leather, festive, and contemporary categories."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="nav">
-  <h2>Kolhapuri Store</h2>
-  <div>
-    <button onclick="showSection('men')">Men</button>
-    <button onclick="showSection('women')">Women</button>
-    <button onclick="showSection('wedding')">Wedding</button>
+  <div class="topbar">
+    <span>Handmade in Kolhapur</span>
+    <span>Free shipping over Rs. 1999</span>
+    <span>Festival collection now live</span>
   </div>
-</header>
 
-<!-- MEN -->
-<section id="men" class="section">
-  <h2>Men Collection</h2>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Paayal Kolhapuri Home">
+      <span class="brand-mark">PK</span>
+      <span class="brand-copy">
+        <strong>Paayal Kolhapuri</strong>
+        <small>Crafted leather originals</small>
+      </span>
+    </a>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/200">
-      <h3>Classic Brown</h3>
-      <p>₹1200</p>
-      <button onclick="addToCart('Classic Brown',1200)">Add</button>
+    <nav class="nav-links">
+      <a href="#collections">Collections</a>
+      <a href="#craft">Craft</a>
+      <a href="#bestsellers">Bestsellers</a>
+      <a href="#journal">Journal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="cart-button" class="cart-button" aria-label="Open cart">
+        Cart
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- WOMEN -->
-<section id="women" class="section hidden">
-  <h2>Women Collection</h2>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE SIGNATURE WALK</p>
+        <h1>Kolhapuri chappals with runway energy and artisan soul.</h1>
+        <p class="hero-text">
+          Discover bold silhouettes, wedding-ready finishes, and everyday pairs designed to age beautifully.
+          Each pair is handcrafted, detailed by hand, and built for long wear.
+        </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn btn-primary">Shop Collections</a>
+          <a href="#bestsellers" class="btn btn-secondary">See Bestsellers</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>1500+</strong>
+            <span>Pairs crafted monthly</span>
+          </div>
+          <div>
+            <strong>6</strong>
+            <span>Signature categories</span>
+          </div>
+          <div>
+            <strong>4.8/5</strong>
+            <span>Average customer rating</span>
+          </div>
+        </div>
+      </div>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/200">
-      <h3>Gold Style</h3>
-      <p>₹1800</p>
-      <button onclick="addToCart('Gold Style',1800)">Add</button>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card hero-card-main">
+          <span>Wedding Edit</span>
+          <strong>Mirror-work gold straps with soft sole lining</strong>
+        </div>
+        <div class="hero-card hero-card-secondary">
+          <span>Everyday Comfort</span>
+          <strong>Cloud-soft leather footbeds</strong>
+        </div>
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span>Vegetable-tanned leather</span>
+        <span>Hand-braided straps</span>
+        <span>Cushioned footbeds</span>
+        <span>Limited festive drops</span>
+        <span>Sizes 4 to 11</span>
+        <span>COD available</span>
+        <span>Vegetable-tanned leather</span>
+        <span>Hand-braided straps</span>
+      </div>
+    </section>
+
+    <section id="collections" class="collections-section">
+      <div class="section-heading">
+        <p class="eyebrow">CATEGORY WALL</p>
+        <h2>Choose your Kolhapuri lane.</h2>
+        <p>Browse by finish, occasion, and feel. Use filters to search, sort, and compare pairs instantly.</p>
+      </div>
+
+      <div id="category-chips" class="category-chips" aria-label="Product categories"></div>
+
+      <div class="shop-shell">
+        <aside class="filter-panel">
+          <div class="filter-block">
+            <label for="search-input">Search styles</label>
+            <input id="search-input" type="search" placeholder="Search by name, color, or category">
+          </div>
+
+          <div class="filter-block">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+
+          <div class="filter-block">
+            <span class="filter-title">Price range</span>
+            <div class="price-slider-wrap">
+              <input id="price-range" type="range" min="1500" max="5000" step="100" value="5000">
+              <div class="price-range-label">
+                <span>Up to</span>
+                <strong id="price-range-value">Rs. 5000</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <span class="filter-title">Highlights</span>
+            <div class="toggle-list">
+              <label><input type="checkbox" value="handwoven" class="feature-filter"> Handwoven</label>
+              <label><input type="checkbox" value="bridal" class="feature-filter"> Bridal</label>
+              <label><input type="checkbox" value="comfort" class="feature-filter"> Comfort</label>
+              <label><input type="checkbox" value="festive" class="feature-filter"> Festive</label>
+            </div>
+          </div>
+        </aside>
+
+        <div class="product-area">
+          <div class="product-meta">
+            <p id="results-summary">Loading products...</p>
+            <button id="clear-filters" class="text-button">Clear filters</button>
+          </div>
+          <div id="product-grid" class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="craft" class="craft-section">
+      <div class="craft-copy">
+        <p class="eyebrow">MADE WITH INTENT</p>
+        <h2>From artisan bench to your wardrobe.</h2>
+        <p>
+          We work with family-run workshops in Kolhapur to preserve traditional leatherwork while upgrading comfort,
+          lining, and fit. The result is a sharper, more contemporary Kolhapuri that still feels deeply rooted.
+        </p>
+      </div>
+      <div class="craft-grid">
+        <article>
+          <strong>01</strong>
+          <h3>Cut by hand</h3>
+          <p>Every upper is cut and shaped to retain clean form and natural grain.</p>
+        </article>
+        <article>
+          <strong>02</strong>
+          <h3>Layered comfort</h3>
+          <p>Soft insole padding is added without losing the authentic flat profile.</p>
+        </article>
+        <article>
+          <strong>03</strong>
+          <h3>Detailed finishes</h3>
+          <p>Braids, foil accents, studs, and mirrorwork are applied in small production runs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="bestsellers" class="bestseller-section">
+      <div class="section-heading">
+        <p class="eyebrow">EDITOR PICKS</p>
+        <h2>Best-selling pairs this season.</h2>
+      </div>
+      <div id="bestseller-strip" class="bestseller-strip"></div>
+    </section>
+
+    <section id="journal" class="journal-section">
+      <div class="section-heading">
+        <p class="eyebrow">STYLE NOTES</p>
+        <h2>How to wear Kolhapuris now.</h2>
+      </div>
+      <div class="journal-grid">
+        <article>
+          <span>Festive Styling</span>
+          <h3>Mirrorwork pairs for haldi, mehendi, and destination weddings.</h3>
+          <p>Pair warm metallic Kolhapuris with tonal embroidered sets for a lighter alternative to heels.</p>
+        </article>
+        <article>
+          <span>Daily Rotation</span>
+          <h3>Soft leather tan pairs for office and brunch.</h3>
+          <p>Choose slimmer straps, contrast stitching, and matte finishes to keep the look elevated and versatile.</p>
+        </article>
+        <article>
+          <span>Modern Classics</span>
+          <h3>Black-on-black Kolhapuris that work with denim and tailoring.</h3>
+          <p>Structured uppers and padded soles make these ideal for all-day city wear.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-copy">
+        <p class="eyebrow">GET EARLY ACCESS</p>
+        <h2>Join new drops and private festive launches.</h2>
+        <p>Leave your details and preferred category. We will save your interest right in the browser for demo purposes.</p>
+      </div>
+      <form id="interest-form" class="interest-form">
+        <label>
+          Name
+          <input type="text" id="name" required placeholder="Your name">
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" required placeholder="you@example.com">
+        </label>
+        <label>
+          Preferred category
+          <select id="interest-category" required>
+            <option value="">Select one</option>
+            <option value="Wedding Luxe">Wedding Luxe</option>
+            <option value="Classic Heritage">Classic Heritage</option>
+            <option value="Comfort Everyday">Comfort Everyday</option>
+            <option value="Festive Edit">Festive Edit</option>
+            <option value="Contemporary Edge">Contemporary Edge</option>
+            <option value="Men's Signature">Men's Signature</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn-primary">Save My Interest</button>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">YOUR BAG</p>
+        <h3>Cart Summary</h3>
+      </div>
+      <button id="close-cart" class="icon-button" aria-label="Close cart">X</button>
     </div>
-  </div>
-</section>
-
-<!-- WEDDING -->
-<section id="wedding" class="section hidden">
-  <h2>Wedding Collection</h2>
-
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/200">
-      <h3>Royal Wedding</h3>
-      <p>₹2500</p>
-      <button onclick="addToCart('Royal Wedding',2500)">Add</button>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-line">
+        <span>Subtotal</span>
+        <strong id="cart-total">Rs. 0</strong>
+      </div>
+      <button id="checkout-button" class="btn btn-primary checkout-button">Proceed to Checkout</button>
+      <p class="cart-note">Demo checkout only. Your cart stays saved in this browser.</p>
     </div>
-  </div>
-</section>
+  </aside>
 
-<!-- CART -->
-<section class="cart">
-  <h2>Cart</h2>
-  <ul id="cart"></ul>
-  <h3>Total: ₹<span id="total">0</span></h3>
-</section>
+  <div id="cart-overlay" class="cart-overlay" hidden></div>
 
-<script src="script.js"></script>
+  <dialog id="product-modal" class="product-modal">
+    <div id="modal-content"></div>
+  </dialog>
+
+  <template id="product-card-template">
+    <article class="product-card">
+      <button class="card-visual" type="button"></button>
+      <div class="product-card-body">
+        <div class="product-card-top">
+          <span class="product-category"></span>
+          <span class="product-rating"></span>
+        </div>
+        <h3 class="product-name"></h3>
+        <p class="product-description"></p>
+        <div class="product-tags"></div>
+        <div class="product-card-footer">
+          <div>
+            <strong class="product-price"></strong>
+            <span class="product-colors"></span>
+          </div>
+          <button class="btn btn-secondary add-to-cart" type="button">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
 </body>
 </html>
