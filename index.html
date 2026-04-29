@@ -1,40 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kolhapuri Chappal Store</title>
+  <meta charset="UTF-8">
+  <title>Kolhapuri Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Kolhapuri Chappal Marketplace</h1>
+<header>
+  <h1>Kolhapuri Chappal Store</h1>
+  <p>Authentic Handmade Collection</p>
+</header>
 
+<section class="category">
+  <h2>Classic Kolhapuri</h2>
   <div class="products">
 
-    <!-- Product 1 -->
     <div class="card">
-      <img src="https://via.placeholder.com/150">
-      <h3>Classic Kolhapuri</h3>
+      <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+      <h3>Classic Brown</h3>
       <p>₹1200</p>
-      <button onclick="buyItem('Classic Kolhapuri', 1200)">Buy</button>
+      <button onclick="addToCart('Classic Brown',1200)">Add to Cart</button>
     </div>
 
-    <!-- Product 2 -->
     <div class="card">
-      <img src="https://via.placeholder.com/150">
-      <h3>Leather Premium</h3>
-      <p>₹1800</p>
-      <button onclick="buyItem('Leather Premium', 1800)">Buy</button>
+      <img src="https://images.unsplash.com/photo-1600185365926-3a2ce7cdbf04">
+      <h3>Traditional Tan</h3>
+      <p>₹1500</p>
+      <button onclick="addToCart('Traditional Tan',1500)">Add to Cart</button>
     </div>
 
   </div>
+</section>
 
-  <!-- Cart Section -->
-  <h2>Your Cart</h2>
+<section class="category">
+  <h2>Designer Kolhapuri</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a415522316b2">
+      <h3>Beaded Design</h3>
+      <p>₹2000</p>
+      <button onclick="addToCart('Beaded Design',2000)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a415522316b2">
+      <h3>Wedding Style</h3>
+      <p>₹2500</p>
+      <button onclick="addToCart('Wedding Style',2500)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="category">
+  <h2>Modern Styles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+      <h3>Wedge Kolhapuri</h3>
+      <p>₹1800</p>
+      <button onclick="addToCart('Wedge Kolhapuri',1800)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+      <h3>Platform Style</h3>
+      <p>₹2200</p>
+      <button onclick="addToCart('Platform Style',2200)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="cart-section">
+  <h2>🛒 Your Cart</h2>
   <ul id="cart"></ul>
-
-  <!-- Total -->
   <h3>Total: ₹<span id="total">0</span></h3>
+</section>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
