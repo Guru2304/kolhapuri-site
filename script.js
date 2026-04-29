@@ -4,15 +4,13 @@ function buyItem(name, price) {
   let cart = document.getElementById("cart");
 
   let li = document.createElement("li");
+  li.innerHTML = name + " - ₹" + price + " ";
 
-  li.textContent = name + " - ₹" + price + " ";
-
-  // Remove button
   let btn = document.createElement("button");
-  btn.textContent = "Remove";
+  btn.innerText = "Remove";
 
   btn.onclick = function () {
-    cart.removeChild(li);
+    li.remove();
     total -= price;
     updateTotal();
   };
@@ -25,5 +23,5 @@ function buyItem(name, price) {
 }
 
 function updateTotal() {
-  document.getElementById("total").textContent = total;
+  document.getElementById("total").innerText = total;
 }
