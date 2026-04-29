@@ -6,61 +6,55 @@
 </head>
 <body>
 
-<header class="hero">
-  <h1>Kolhapuri Chappal Store</h1>
-  <p>Heritage • Handmade • Premium Comfort</p>
+<header class="nav">
+  <h2>Kolhapuri Store</h2>
+  <div>Home | Shop | Cart</div>
 </header>
 
+<section class="hero">
+  <h1>Premium Kolhapuri Chappals</h1>
+  <p>Handcrafted • Traditional • Stylish</p>
+</section>
+
 <section class="section">
-  <h2>Shop by Category</h2>
+  <h2>Categories</h2>
 
   <div class="grid">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
-      <h3>Men's Collection</h3>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1585386959984-a415522316b2">
-      <h3>Women's Collection</h3>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600185365926-3a2ce7cdbf04">
-      <h3>Wedding Wear</h3>
-    </div>
-
+    <div class="card">Men</div>
+    <div class="card">Women</div>
+    <div class="card">Wedding</div>
+    <div class="card">Premium</div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Featured Products</h2>
+  <h2>Products</h2>
 
   <div class="grid">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+    <div class="card product">
+      <img src="https://via.placeholder.com/200">
       <h3>Royal Brown</h3>
       <p>₹1200</p>
       <button onclick="addToCart('Royal Brown',1200)">Add</button>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1585386959984-a415522316b2">
-      <h3>Designer Gold</h3>
+    <div class="card product">
+      <img src="https://via.placeholder.com/200">
+      <h3>Gold Designer</h3>
       <p>₹1800</p>
-      <button onclick="addToCart('Designer Gold',1800)">Add</button>
+      <button onclick="addToCart('Gold Designer',1800)">Add</button>
     </div>
 
   </div>
 </section>
 
-<section class="cart">
-  <h2>Your Cart</h2>
+<!-- CART SIDEBAR -->
+<div class="cart">
+  <h3>Your Cart</h3>
   <ul id="cart"></ul>
-  <h3>Total: ₹<span id="total">0</span></h3>
-</section>
+  <p>Total: ₹<span id="total">0</span></p>
+</div>
 
 <script src="script.js"></script>
 </body>
