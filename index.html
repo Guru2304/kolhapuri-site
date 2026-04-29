@@ -1,20 +1,69 @@
-<div class="card men">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Leather_sandals_india.jpg">
-  <h3>Classic Kolhapuri</h3>
-  <p>₹1200</p>
-  <button onclick="addToCart('Classic Kolhapuri',1200)">Add</button>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kolhapuri Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="card men">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Traditional_Indian_sandals.jpg">
-  <h3>Leather Handmade</h3>
-  <p>₹1500</p>
-  <button onclick="addToCart('Leather Handmade',1500)">Add</button>
-</div>
+<header class="nav">
+  <h2>Kolhapuri Store</h2>
+  <div>
+    <button onclick="showSection('men')">Men</button>
+    <button onclick="showSection('women')">Women</button>
+    <button onclick="showSection('wedding')">Wedding</button>
+  </div>
+</header>
 
-<div class="card wedding">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Indian_traditional_footwear.jpg">
-  <h3>Wedding Designer</h3>
-  <p>₹2500</p>
-  <button onclick="addToCart('Wedding Designer',2500)">Add</button>
-</div>
+<!-- MEN -->
+<section id="men" class="section">
+  <h2>Men Collection</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Classic Brown</h3>
+      <p>₹1200</p>
+      <button onclick="addToCart('Classic Brown',1200)">Add</button>
+    </div>
+  </div>
+</section>
+
+<!-- WOMEN -->
+<section id="women" class="section hidden">
+  <h2>Women Collection</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Gold Style</h3>
+      <p>₹1800</p>
+      <button onclick="addToCart('Gold Style',1800)">Add</button>
+    </div>
+  </div>
+</section>
+
+<!-- WEDDING -->
+<section id="wedding" class="section hidden">
+  <h2>Wedding Collection</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Royal Wedding</h3>
+      <p>₹2500</p>
+      <button onclick="addToCart('Royal Wedding',2500)">Add</button>
+    </div>
+  </div>
+</section>
+
+<!-- CART -->
+<section class="cart">
+  <h2>Cart</h2>
+  <ul id="cart"></ul>
+  <h3>Total: ₹<span id="total">0</span></h3>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
