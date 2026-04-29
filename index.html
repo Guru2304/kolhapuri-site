@@ -15,7 +15,7 @@
       <img src="https://via.placeholder.com/150">
       <h3>Classic Kolhapuri</h3>
       <p>₹1200</p>
-      <button onclick="buyItem('Classic Kolhapuri')">Buy</button>
+      <button onclick="buyItem('Classic Kolhapuri', 1200)">Buy</button>
     </div>
 
     <!-- Product 2 -->
@@ -23,7 +23,7 @@
       <img src="https://via.placeholder.com/150">
       <h3>Leather Premium</h3>
       <p>₹1800</p>
-      <button onclick="buyItem('Leather Premium')">Buy</button>
+      <button onclick="buyItem('Leather Premium', 1800)">Buy</button>
     </div>
 
   </div>
@@ -31,6 +31,9 @@
   <!-- Cart Section -->
   <h2>Your Cart</h2>
   <ul id="cart"></ul>
+
+  <!-- Total -->
+  <h3>Total: ₹<span id="total">0</span></h3>
 
   <script src="script.js"></script>
 </body>

@@ -1,8 +1,29 @@
-function buyItem(name) {
+let total = 0;
+
+function buyItem(name, price) {
   let cart = document.getElementById("cart");
 
-  let item = document.createElement("li");
-  item.textContent = name;
+  let li = document.createElement("li");
 
-  cart.appendChild(item);
+  li.textContent = name + " - ₹" + price + " ";
+
+  // Remove button
+  let btn = document.createElement("button");
+  btn.textContent = "Remove";
+
+  btn.onclick = function () {
+    cart.removeChild(li);
+    total -= price;
+    updateTotal();
+  };
+
+  li.appendChild(btn);
+  cart.appendChild(li);
+
+  total += price;
+  updateTotal();
+}
+
+function updateTotal() {
+  document.getElementById("total").textContent = total;
 }
