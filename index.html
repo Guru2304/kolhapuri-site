@@ -38,6 +38,13 @@
     </nav>
 
     <div class="header-actions">
+      <!-- NEW CODE: Minimal Firebase auth controls -->
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span id="auth-status" style="font-size:0.9rem;color:var(--muted, #67564b);">Guest</span>
+        <button id="login-button" class="btn btn-secondary" type="button" style="padding:10px 16px;">Login</button>
+        <button id="signup-button" class="btn btn-secondary" type="button" style="padding:10px 16px;">Signup</button>
+        <button id="logout-button" class="btn btn-secondary" type="button" style="padding:10px 16px;display:none;">Logout</button>
+      </div>
       <button id="cart-button" class="cart-button" aria-label="Open cart">
         Cart
         <span id="cart-count" class="cart-count">0</span>
@@ -299,6 +306,10 @@
     </article>
   </template>
 
+  <!-- NEW CODE: Firebase script-tag setup -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
